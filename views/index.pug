@@ -1,0 +1,53 @@
+extends layout
+
+block content
+  nav
+    ul#headerContainer
+      li
+        h1#websiteName= title
+      li
+        #inputContainer
+          label UserID: 
+          #userIdInputContainer
+            input#userIdInput(type='text' value=process.env.EXAMPLE_USER_ID)
+            button#userIdLookUpButton(type='button') Look Up User
+        #reviewInputContainer
+          label Max number of reviews:
+          #reviewLimitContainer
+            select#reviewLimitInput(type='text')
+            button#reviewLimitButton(type='button') Load reviews
+            button#reviewLimitCancelButton(type='button') Cancel
+    #userInfoContainer
+      #userAvatar   
+        img(src='https://s3-media0.fl.yelpcdn.com/photo/k3QdRQ7hxXLX4-RuNcskpw/ls.jpg')
+      ul#userInfo
+        li
+          h1 User Name
+        li
+          p#userHometown Hometown
+        li
+          p#userReviewNumber 33 reviews
+
+
+  // The div element for the map
+  #map
+  //
+    The `defer` attribute causes the callback to execute after the full HTML
+    document has been parsed. For non-blocking uses, avoiding race conditions,
+    and consistent behavior across browsers, consider loading using Promises
+    with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+
+  #myModal.modal
+    // Modal content
+    .modal-content
+      .modal-header
+        span.close &times;
+      .modal-body
+
+  #loaderScreen
+    #loader
+      .spinner
+      p
+  
+  script(src='/javascripts/scripts.js')
+  script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&callback=initMap&v=weekly` defer='')
