@@ -16,7 +16,7 @@ const userNameSelector = `.user-profile_info > h1`
 const userHometownSelector = `.user-location`;
 
 function getCurrentReviewSelector(index) {
-    return `.reviews > li:nth-child(${index}) > .review `;
+    return `.reviews > li:nth-child(${index}) > .review`;
 }
 
 function getUserReviewUrl(useId, pageNumber) {

@@ -118,8 +118,8 @@ let span = document.getElementsByClassName("close")[0];
 function popUpReview(reviewId) {
   document.getElementsByClassName("modal-body")[0].innerHTML = 
     `<iframe data-review-id="${reviewId}" class="yelp-review ui-droppable" /
-    src="https://www.yelp.com/embed/review/${reviewId}?embed_location=localhost:3000" /
-    scrolling="no" style="display: block; width: 100%; height: 280px; border: 0px;"></iframe>`
+    src="https://www.yelp.com/embed/review/${reviewId}" /
+    scrolling="yes" style="display: block; width: 100%; height: 280px; border: 0px;"></iframe>`
   modal.style.display = "block";
 }
 
