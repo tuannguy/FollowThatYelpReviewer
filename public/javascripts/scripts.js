@@ -64,7 +64,7 @@ async function getUserProfile(userId) {
     document.getElementById('userInfoContainer').style.display = 'flex';
     document.querySelector('#userInfo h1').textContent = reviews.Name;
     document.getElementById('userHometown').textContent = reviews.Hometown;
-    document.getElementById('userReviewNumber').textContent = `${reviews.NumberOfReviews} reviews`;
+    document.getElementById('userReviewNumber').textContent = `${reviews.NumberOfReviews} Reviews`;
     document.querySelector('#userAvatar > img').src = reviews.AvatarImage;
 
     //Show Review Limit Menu
