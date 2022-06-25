@@ -8,7 +8,7 @@ Usage
 
 https://user-images.githubusercontent.com/43122789/175793367-b9bd18b4-d807-44fe-a5b5-95d725bfbde4.mp4
 
-Live: <https://epsil.github.io/spotgen/>
+Live: <https://follow-that-yelp-reviewer.vercel.app/>
 
 You can get the userID in the URL when you go to a Yelp user profile:
 
