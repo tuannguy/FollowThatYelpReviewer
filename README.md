@@ -1,5 +1,5 @@
 # FollowThatYelpReviewer
-A Nodejs/Express app for scraping the Yelp website for the lastest reviews from a user, and displaying the review locations on a map using Google Maps API
+A Nodejs/Express app for scraping the Yelp website for the latest reviews from a user, and displaying the review locations on a map using Google Maps API
 
 Usage
 -----
