@@ -7,13 +7,13 @@ block content
         h1#websiteName= title
       li
         #inputContainer
-          label UserID: 
           #userIdInputContainer
+            label UserID: 
             input#userIdInput(type='text' value=process.env.EXAMPLE_USER_ID)
             button#userIdLookUpButton(type='button') Look Up User
         #reviewInputContainer
-          label Max number of reviews:
           #reviewLimitContainer
+            label Max number of reviews:
             select#reviewLimitInput(type='text')
             button#reviewLimitButton(type='button') Load reviews
             button#reviewLimitCancelButton(type='button') Cancel

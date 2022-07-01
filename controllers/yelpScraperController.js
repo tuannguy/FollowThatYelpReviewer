@@ -128,7 +128,7 @@ exports.GetUser = async (req, res) => {
         });
     } catch (err) {
         if (err instanceof TypeError) {
-            return res.status(400).json({
+            return res.status(404).json({
                 error: err.message,
             });
         } else {
