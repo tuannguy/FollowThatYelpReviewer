@@ -48,8 +48,8 @@ async function getUserProfile(userId) {
   let endpoint;
   endpoint = `/api/v1/yelpScraper/getUser/${userId}`
 
-  success = true;
-  reviews = await axios(endpoint)
+  let success = true;
+  let reviews = await axios(endpoint)
     .then(
       response => response.data.data
     )
@@ -74,7 +74,7 @@ async function getUserProfile(userId) {
 
     reviewLimitInput.options = [];
 
-    for (i = 1; i <= Math.ceil(reviews.NumberOfReviews / 10); i++) {
+    for (let i = 1; i <= Math.ceil(reviews.NumberOfReviews / 10); i++) {
       let val = i*10;
       reviewLimitInput.options[i-1]= new Option(`${val}`, val, false, false);
     }

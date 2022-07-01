@@ -65,9 +65,7 @@ async function scrapeReviewPage(url) {
 
 async function reviewScraper(userId, reviewNumberLimit) {
 
-    const userReviewUrl = getUserReviewUrl(userId);
     let reviews = [];
-    // let numberOfReviewPages = 0;
     let numberOfReviewPages = reviewNumberLimit / 10;
 
     for (let pageIndex = 0; pageIndex < numberOfReviewPages; pageIndex++) {

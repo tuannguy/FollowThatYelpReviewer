@@ -20,7 +20,7 @@ let delay = 100;  // delay between geocode requests
 // ==== Initialize and add the map ====
 
 function initMap() {
-  geo = new google.maps.Geocoder(); 
+  geocoder = new google.maps.Geocoder(); 
   const USAcenter = { lat: 39.8097343, lng: -98.5556199 };
   map = new google.maps.Map(document.getElementById("map"), {
     center: USAcenter,
@@ -37,7 +37,7 @@ window.initMap = initMap;
 function getAddress(review, next) {
 
   let search = review.Address;
-  geo.geocode({address:search}, function (results,status) { 
+  geocoder.geocode({address:search}, function (results,status) { 
     // If that was successful
     if (status == google.maps.GeocoderStatus.OK) {
       // Lets assume that the first marker is the one we want
@@ -79,7 +79,7 @@ function createMarker(reviewId,lat,lng) {
 function theNext() {
 
   let loader = document.getElementById("loaderScreen");
-  let loaderProgress = loader.querySelector("p");
+  let loaderProgress = loader.getElementsByTagName("p");
 
   if (nextReview < reviews.length) {
 
@@ -103,7 +103,7 @@ function theNext() {
 
 function resetMap() {
 
-  for (curMarker of markers) {
+  for (let curMarker of markers) {
     curMarker.setMap(null);
   }
   markers = [];
@@ -116,7 +116,7 @@ async function mapYelpReviews(userId, reviewNumberLimit) {
   resetMap();
 
   let loader = document.getElementById("loaderScreen");
-  let loaderProgress = loader.querySelector("p");
+  let loaderProgress = loader.getElementsByTagName("p");
   loader.style.display = "block";
   loaderProgress.textContent = `Getting data...`
 
